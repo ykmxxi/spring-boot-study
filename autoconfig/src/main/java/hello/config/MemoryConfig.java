@@ -1,15 +1,15 @@
 package hello.config;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 
-import memory.MemoryCondition;
 import memory.MemoryController;
 import memory.MemoryFinder;
 
 @Configuration
-@Conditional(MemoryCondition.class)
+// @Conditional(MemoryCondition.class)
+@ConditionalOnProperty(name = "memory", havingValue = "on") // 부트가 제공하는 기능
 public class MemoryConfig {
 
 	@Bean
