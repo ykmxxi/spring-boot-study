@@ -21,7 +21,7 @@ public class MyDataSourceConfigV1 {
     public MyDataSource dataSource() {
         return new MyDataSource(properties.getUrl(), properties.getUsername(), properties.getPassword(),
                 properties.getEtc().getMaxConnection(),
-                properties.getEtc().getDuration(),
+                properties.getEtc().getTimeout(),
                 properties.getEtc().getOptions()
         );
     }

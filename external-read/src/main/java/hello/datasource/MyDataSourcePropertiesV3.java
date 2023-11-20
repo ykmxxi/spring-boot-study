@@ -45,15 +45,15 @@ public class MyDataSourcePropertiesV3 {
         @Min(1) @Max(999)
         private final int maxConnection;
         @DurationMin(seconds = 1) @DurationMax(seconds = 60)
-        private final Duration duration;
+        private final Duration timeout;
         private final List<String> options;
 
         public Etc(final int maxConnection,
-                   final Duration duration,
+                   final Duration timeout,
                    @DefaultValue("DEFAULT") final List<String> options
         ) {
             this.maxConnection = maxConnection;
-            this.duration = duration;
+            this.timeout = timeout;
             this.options = options;
         }
 
