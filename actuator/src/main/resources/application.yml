@@ -1,6 +1,9 @@
 management:
+  endpoint:
+    health:
+      #show-details: always # 자세하게 보기
+      show-components: always # 간략하게 보기
   endpoints:
     web:
       exposure:
         include: "*"
-        exclude: "env,beans"
