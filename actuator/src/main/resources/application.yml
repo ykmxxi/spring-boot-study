@@ -1,4 +1,13 @@
 management:
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+    env:
+      enabled: true
+    git:
+      enabled: true
   endpoint:
     health:
       #show-details: always # 자세하게 보기
@@ -7,3 +16,7 @@ management:
     web:
       exposure:
         include: "*"
+info:
+  app:
+    name: hello-actuator
+    company: yh
