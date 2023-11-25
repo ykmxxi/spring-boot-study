@@ -1,0 +1,29 @@
+management:
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+    env:
+      enabled: true
+    git:
+      enabled: true
+  endpoint:
+    health:
+      #show-details: always # 자세하게 보기
+      show-components: always # 간략하게 보기
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  server:
+    port: 8080 # 액츄에이터 포트 설정
+
+info:
+  app:
+    name: hello-actuator
+    company: yh
+
+logging:
+  level:
+    hello.controller: debug
